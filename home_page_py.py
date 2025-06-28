@@ -19,10 +19,11 @@ st.title('Predictor')
 mean_int_prof = st.slider('Mean of the integrated profile', 0.0, 200.0, 100.0)
 std_int_prof = st.slider('Standard deviation of the integrated profile', 0.0, 100.0, 40.0)
 skew_int_prof = st.slider('Skewness of the integrated profile', -2.0, 50.0, 90.0)
+std_dmsnr = st.slider('Standard deviation of the DM-SNR curve',0.0,50,120.0)
 mean_dmsnr = st.slider('Mean of the DM-SNR curve', 0.0, 140.0, 40.0)
 exk_dmsnr = st.slider('Excess kurtosis of the DM-SNR curve', -5.0, 50.0, 30.0)
 
-input_data  = np.array([mean_int_prof,std_int_prof,skew_int_prof,mean_dmsnr,exk_dmsnr]).reshape(1,-1)
+input_data  = np.array([mean_int_prof,std_int_prof,skew_int_prof,std_dmsnr,mean_dmsnr,exk_dmsnr]).reshape(1,-1)
 if st.button('Predict'):
   res = ada.predict(input_data)[0]
   st.subheader('Results')
