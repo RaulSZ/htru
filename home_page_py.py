@@ -19,7 +19,7 @@ st.title('Predictor')
 mean_int_prof = st.slider('Mean of the integrated profile', 0.0, 200.0, 100.0)
 std_int_prof = st.slider('Standard deviation of the integrated profile', 0.0, 100.0, 40.0)
 skew_int_prof = st.slider('Skewness of the integrated profile', -2.0, 50.0, 90.0)
-std_dmsnr = st.slider('Standard deviation of the DM-SNR curve',0.0,50,120.0)
+std_dmsnr = st.slider('Standard deviation of the DM-SNR curve',0.0,50.0,120.0)
 mean_dmsnr = st.slider('Mean of the DM-SNR curve', 0.0, 140.0, 40.0)
 exk_dmsnr = st.slider('Excess kurtosis of the DM-SNR curve', -5.0, 50.0, 30.0)
 
